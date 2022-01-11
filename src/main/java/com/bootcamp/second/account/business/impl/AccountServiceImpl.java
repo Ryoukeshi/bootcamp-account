@@ -16,8 +16,8 @@ public class AccountServiceImpl implements AccountService{
 
     @Override
     public Mono<Account> create(Account account) {
-        // TODO Auto-generated method stub
-        return null;
+        
+        return accountRepository.insert(account);
     }
 
     @Override
@@ -34,14 +34,14 @@ public class AccountServiceImpl implements AccountService{
 
     @Override
     public Mono<Account> update(Account account) {
-        // TODO Auto-generated method stub
-        return null;
+        
+        return accountRepository.findById(account.getId()).flatMap(a -> accountRepository.save(account).thenReturn(a));
     }
 
     @Override
     public Mono<Account> remove(String accountId) {
-        // TODO Auto-generated method stub
-        return null;
+        
+        return accountRepository.findById(accountId).flatMap(a -> accountRepository.deleteById(a.getId()).thenReturn(a));
     }
 
     @Override
