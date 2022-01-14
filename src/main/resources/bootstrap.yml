@@ -1,6 +1,11 @@
-server:
-    port: 8081
 spring:
+    application:
+        name: bootcamp-account
+    cloud:
+        config:
+            uri: http://localhost:8084
+            username: root
+            password: s3cr3t
     data:
         mongodb:
             # MongoDB
