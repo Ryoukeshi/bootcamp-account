@@ -24,6 +24,6 @@ public class Account {
     private String acc_type;
     private String maintenance;
     private String tr_limit;
-    private String fee;
+    private String transfer_fee;
     private String status;
 }
