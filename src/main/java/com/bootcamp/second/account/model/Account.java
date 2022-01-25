@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "account")
+@Document(collection = "accounts")
 public class Account {
 
     @Id
@@ -24,6 +24,6 @@ public class Account {
     private String acc_type;
     private String maintenance;
     private String tr_limit;
-    private String transfer_fee;
+    //private String transfer_fee;
     private String status;
 }

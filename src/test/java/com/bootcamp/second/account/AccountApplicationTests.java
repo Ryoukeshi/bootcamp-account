@@ -1,10 +1,10 @@
-package com.bootcamp.second.asset;
+package com.bootcamp.second.account;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AssetApplicationTests {
+class AccountApplicationTests {
 
 	@Test
 	void contextLoads() {

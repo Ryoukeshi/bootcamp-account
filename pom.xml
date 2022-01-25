@@ -9,13 +9,13 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bootcamp.second</groupId>
-	<artifactId>asset</artifactId>
+	<artifactId>account</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>asset</name>
+	<name>account</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-		<sonar.organization>Ryoukeshi</sonar.organization>
+		<sonar.organization>ryoukeshi</sonar.organization>
     	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<maven-pmd-plugin.version>3.12.0</maven-pmd-plugin.version>
 		<checkstyle.version>8.40</checkstyle.version>
