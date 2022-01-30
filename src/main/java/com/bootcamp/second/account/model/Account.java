@@ -22,7 +22,7 @@ public class Account {
     private String id;
 
     @Field(name = "owner")
-    private String owner;
+    private Client owner;
 
     @Field(name = "accType")
     private String accType;

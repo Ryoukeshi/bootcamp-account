@@ -1,12 +1,21 @@
 package com.bootcamp.second.account.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class AccountDTO {
     private String id;
 
-    private String owner;
-    private String acc_type;
+    private Client owner;
+    private String accType;
     private String maintenance;
-    private String tr_limit;
-    //private String transfer_fee;
+    private String trLimit;
+    private String transferFee;
     private String status;
 }

@@ -2,24 +2,25 @@ package com.bootcamp.second.account.business;
 
 import com.bootcamp.second.account.model.Account;
 
+import com.bootcamp.second.account.model.AccountDTO;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 public interface AccountService {
 
-    Mono<Account> create(Account account);
+    Mono<AccountDTO> create(AccountDTO account);
 
-    Mono<Account> findById(String accountId);
+    Mono<AccountDTO> findById(String accountId);
 
-    Flux<Account> findAll();
+    Flux<AccountDTO> findAll();
     
-    Mono<Account> update(Account account);
+    Mono<AccountDTO> update(AccountDTO account);
 
-    Mono<Account> remove(String accountId);
+    Mono<AccountDTO> remove(String accountId);
 
-    Flux<Account> findAccountByOwner(String owner);
+    Flux<AccountDTO> findAccountByOwner(String owner);
 
-    Flux<Account> findAccountByAcc_Type(String acc_type);
+    Flux<AccountDTO> findAccountByAccType(String acc_type);
 
-    Flux<Account> findAccountByTr_Limit(String tr_limit);
+    Flux<AccountDTO> findAccountByTrLimit(String tr_limit);
 }
