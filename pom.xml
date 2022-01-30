@@ -72,10 +72,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
  			<groupId>org.springframework.cloud</groupId>
  			<artifactId>spring-cloud-starter-bootstrap</artifactId>
  			<version>3.1.0</version>
@@ -91,6 +87,10 @@
 			<artifactId>gson</artifactId>
 			<version>2.8.9</version>
 	  	</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -100,6 +100,7 @@
  				<artifactId>spring-cloud-dependencies</artifactId>
  				<version>2021.0.0</version>
  				<type>pom</type>
+				<scope>import</scope>
  			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -175,7 +176,7 @@
 				  </execution>
 				</executions>
 				<configuration>
-				  <foo>bar</foo>
+				  <!--<foo>bar</foo>-->
 				  <excludeFilterFile>spotbugs-exclude.xml</excludeFilterFile>
 				</configuration>
 			</plugin>
@@ -246,7 +247,7 @@
 			<artifactId>spotbugs-maven-plugin</artifactId>
 			<version>${spotbugs.plugin.version}</version>
 			<configuration>
-			  <foo>bar</foo>
+			  <!--<foo>bar</foo>-->
 			</configuration>
 		  </plugin>
 	

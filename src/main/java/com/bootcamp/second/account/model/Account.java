@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Getter
 @Setter
@@ -18,12 +19,23 @@ import lombok.Setter;
 public class Account {
 
     @Id
-    private String id = UUID.randomUUID().toString();
-    
+    private String id;
+
+    @Field(name = "owner")
     private String owner;
-    private String acc_type;
+
+    @Field(name = "accType")
+    private String accType;
+
+    @Field(name = "maintenance")
     private String maintenance;
-    private String tr_limit;
-    //private String transfer_fee;
+
+    @Field(name = "trLimit")
+    private String trLimit;
+
+    @Field(name = "transferFee")
+    private String transferFee;
+
+    @Field(name = "status")
     private String status;
 }
