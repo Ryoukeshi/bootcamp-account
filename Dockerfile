@@ -5,6 +5,6 @@ RUN mvn clean package
 
 FROM openjdk:11-jdk
 WORKDIR /usr/src/app
-COPY --from=build /usr/src/app/target/bootcamp-account-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=build /usr/src/app/target/account-0.0.1-SNAPSHOT.jar ./app.jar
 EXPOSE 8003
 ENTRYPOINT ["java","-jar","app.jar"]
