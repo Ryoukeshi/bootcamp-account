@@ -10,9 +10,9 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface AccountRepository extends ReactiveMongoRepository<Account, String>{
 
-    Flux<Account> findAccountsByOwner(String owner);
+    Flux<Account> findByOwner(String owner);
     
-    Flux<Account> findAccountsByAcc_Type(String acc_type);
+    Flux<Account> findAccountsByAccType(String acc_type);
 
-    Flux<Account> findAccountsByTr_Limit(String tr_limit);
+    Flux<Account> findAccountsByTrLimit(String tr_limit);
 }

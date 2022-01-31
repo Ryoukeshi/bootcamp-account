@@ -3,6 +3,7 @@ package com.bootcamp.second.account.controller;
 import com.bootcamp.second.account.business.AccountService;
 import com.bootcamp.second.account.model.Account;
 
+import com.bootcamp.second.account.model.AccountDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +28,7 @@ public class AccountController {
     AccountService accountService;
 
     @GetMapping("/api/accounts/{id}")
-    public Mono<Account> byId(@PathVariable ("id") String id) {
+    public Mono<AccountDTO> byId(@PathVariable ("id") String id) {
 
         log.info("----getById----");
 
@@ -35,7 +36,7 @@ public class AccountController {
     }
 
     @GetMapping("/api/accounts/findByOwner")
-    public Flux<Account> byOwner(@RequestParam ("owner") String owner) {
+    public Flux<AccountDTO> byOwner(@RequestParam ("owner") String owner) {
 
         log.info("----getByOwner----");
 
@@ -43,21 +44,21 @@ public class AccountController {
     }
 
     @PutMapping("/api/accounts/{id}")
-    public Mono<ResponseEntity<Account>> update(@PathVariable ("id") String id, @RequestBody Account account) {
+    public Mono<ResponseEntity<AccountDTO>> update(@PathVariable ("id") String id, @RequestBody AccountDTO accountDTO) {
 
         log.info("----update----");
 
-        return accountService.update(account)
+        return accountService.update(accountDTO)
             .flatMap(accountUpdate -> Mono.just(ResponseEntity.ok(accountUpdate)))
             .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
     }
     
     @PostMapping("/api/accounts")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mono<Account> create(@RequestBody Account account) {
+    public Mono<AccountDTO> create(@RequestBody AccountDTO accountDTO) {
 
         log.info("----create----");
 
-        return accountService.create(account);
+        return accountService.create(accountDTO);
     }
 }
