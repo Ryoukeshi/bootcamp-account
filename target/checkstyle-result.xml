@@ -2,33 +2,36 @@
 <checkstyle version="8.40">
 <file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\AccountApplication.java">
 <error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="9" column="1" severity="warning" message="La línea contiene un carácter de tabulación." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
-<error line="9" column="9" severity="warning" message="method def modifier en el nivel de sangrado 8 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
-<error line="10" column="1" severity="warning" message="La línea contiene un carácter de tabulación." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
-<error line="10" column="17" severity="warning" message="method def el descendiente en el nivel de sangrado 16 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 <error line="11" column="1" severity="warning" message="La línea contiene un carácter de tabulación." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
-<error line="11" column="9" severity="warning" message="method def rcurly en el nivel de sangrado 8 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="11" column="9" severity="warning" message="method def modifier en el nivel de sangrado 8 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="12" column="1" severity="warning" message="La línea contiene un carácter de tabulación." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="12" column="17" severity="warning" message="method def el descendiente en el nivel de sangrado 16 no está al nivel correcto, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="13" column="1" severity="warning" message="La línea contiene un carácter de tabulación." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
+<error line="13" column="9" severity="warning" message="method def rcurly en el nivel de sangrado 8 no está al nivel correcto, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\business\AccountService.java">
 <error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.business&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="5" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;reactor.core.publisher.Flux&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
-<error line="22" column="48" severity="warning" message="Parameter name &apos;acc_type&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="24" column="48" severity="warning" message="Parameter name &apos;tr_limit&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="5" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;com.bootcamp.second.account.model.AccountDTO&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="23" column="50" severity="warning" message="Parameter name &apos;acc_type&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="25" column="50" severity="warning" message="Parameter name &apos;tr_limit&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
 <file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\business\impl\AccountServiceImpl.java">
 <error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.business.impl&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="7" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;org.springframework.beans.factory.annotation.Autowired&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
-<error line="10" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;reactor.core.publisher.Flux&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
-<error line="14" column="58" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="46" severity="warning" message="La línea es mayor de 120 caracteres (encontrado 121)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="56" column="55" severity="warning" message="Parameter name &apos;acc_type&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="62" column="55" severity="warning" message="Parameter name &apos;tr_limit&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="8" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;com.bootcamp.second.account.utils.Constants&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="13" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;reactor.core.publisher.Flux&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="17" column="58" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="23" column="47" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="51" column="47" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="81" column="57" severity="warning" message="Parameter name &apos;acc_type&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="90" column="57" severity="warning" message="Parameter name &apos;tr_limit&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
 <file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\controller\AccountController.java">
 <error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.controller&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
-<error line="6" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;org.springframework.beans.factory.annotation.Autowired&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
-<error line="18" column="1" severity="warning" message="Orden lexicográfico incorrecto de &apos;lombok.extern.slf4j.Slf4j&apos; importación. En caso de ser antes de &apos;org.springframework.web.bind.annotation.RestController&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
-<error line="18" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;lombok.extern.slf4j.Slf4j&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="6" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;com.bootcamp.second.account.model.AccountDTO&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="19" column="1" severity="warning" message="Orden lexicográfico incorrecto de &apos;lombok.extern.slf4j.Slf4j&apos; importación. En caso de ser antes de &apos;org.springframework.web.bind.annotation.RestController&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="19" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;lombok.extern.slf4j.Slf4j&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="47" column="108" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="58" column="60" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
 </file>
 <file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\model\Account.java">
 <error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.model&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
@@ -38,8 +41,13 @@
 <error line="9" column="1" severity="warning" message="Orden lexicográfico incorrecto de &apos;lombok.Getter&apos; importación. En caso de ser antes de &apos;org.springframework.data.mongodb.core.mapping.Document&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
 <error line="10" column="1" severity="warning" message="Orden lexicográfico incorrecto de &apos;lombok.NoArgsConstructor&apos; importación. En caso de ser antes de &apos;org.springframework.data.mongodb.core.mapping.Document&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
 <error line="11" column="1" severity="warning" message="Orden lexicográfico incorrecto de &apos;lombok.Setter&apos; importación. En caso de ser antes de &apos;org.springframework.data.mongodb.core.mapping.Document&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
-<error line="24" column="20" severity="warning" message="Member name &apos;acc_type&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
-<error line="26" column="20" severity="warning" message="Member name &apos;tr_limit&apos; must match pattern &apos;^[a-z][a-z0-9][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
+</file>
+<file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\model\AccountDTO.java">
+<error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.model&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="12" column="14" severity="warning" message="Abreviatura en nombre &apos;AccountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+</file>
+<file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\model\Client.java">
+<error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.model&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
 </file>
 <file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\repository\AccountRepository.java">
 <error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.repository&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
@@ -47,7 +55,24 @@
 <error line="8" column="1" severity="warning" message="Separación extra en el grupo de importación antes &apos;reactor.core.publisher.Flux&apos;" source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
 <error line="11" column="83" severity="warning" message="GenericWhitespace &apos;&gt;&apos; should followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
 <error line="11" column="84" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="15" column="49" severity="warning" message="Parameter name &apos;acc_type&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="17" column="49" severity="warning" message="Parameter name &apos;tr_limit&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="15" column="48" severity="warning" message="Parameter name &apos;acc_type&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="17" column="48" severity="warning" message="Parameter name &apos;tr_limit&apos; must match pattern &apos;^[a-z]([a-z0-9][a-zA-Z0-9]*)?$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+</file>
+<file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\utils\Constants.java">
+<error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.utils&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+</file>
+<file name="C:\Users\rrabines\Documents\bootcamp-account\src\main\java\com\bootcamp\second\account\utils\ConversionUtils.java">
+<error line="1" column="9" severity="warning" message="El nombre &apos;com.bootcamp.second.account.utils&apos; debe coincidir con el patrón &apos;com\.tdp\.ms\.*(\.[a-z][a-zA-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="10" column="30" severity="warning" message="Abreviatura en nombre &apos;entityToAccountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="10" column="65" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="11" column="20" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="16" column="57" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="16" column="68" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="22" column="67" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="22" column="78" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="23" column="20" severity="warning" message="Abreviatura en nombre &apos;modifiedAccountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="29" column="67" severity="warning" message="Abreviatura en nombre &apos;accountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
+<error line="29" column="89" severity="warning" message="WhitespaceAround: &apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="30" column="20" severity="warning" message="Abreviatura en nombre &apos;modifiedAccountDTO&apos; debe contener no más de &apos;2&apos; mayúsculas." source="com.puppycrawl.tools.checkstyle.checks.naming.AbbreviationAsWordInNameCheck"/>
 </file>
 </checkstyle>

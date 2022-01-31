@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConversionUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">account</a> &gt; <a href="index.source.html" class="el_package">com.bootcamp.second.account.utils</a> &gt; <span class="el_source">ConversionUtils.java</span></div><h1>ConversionUtils.java</h1><pre class="source lang-java linenums">package com.bootcamp.second.account.utils;
+
+import com.bootcamp.second.account.model.Account;
+import com.bootcamp.second.account.model.AccountDTO;
+import org.springframework.beans.BeanUtils;
+import reactor.core.publisher.Mono;
+
+<span class="nc" id="L8">public class ConversionUtils {</span>
+
+    public static AccountDTO entityToAccountDTO(Account account){
+<span class="nc" id="L11">        AccountDTO accountDTO = new AccountDTO();</span>
+<span class="nc" id="L12">        BeanUtils.copyProperties(account, accountDTO);</span>
+<span class="nc" id="L13">        return accountDTO;</span>
+    }
+
+    public static Account accountDtoToEntity(AccountDTO accountDTO){
+<span class="nc" id="L17">        Account account = new Account();</span>
+<span class="nc" id="L18">        BeanUtils.copyProperties(accountDTO, account);</span>
+<span class="nc" id="L19">        return account;</span>
+    }
+
+    public static Mono&lt;AccountDTO&gt; createAccountEntity(AccountDTO accountDTO){
+<span class="nc" id="L23">        AccountDTO modifiedAccountDTO = new AccountDTO();</span>
+<span class="nc" id="L24">        BeanUtils.copyProperties(accountDTO, modifiedAccountDTO);</span>
+<span class="nc" id="L25">        modifiedAccountDTO.setStatus(Constants.ACTIVE.name());</span>
+<span class="nc" id="L26">        return Mono.just(modifiedAccountDTO);</span>
+    }
+
+    public static Mono&lt;AccountDTO&gt; updateAccountEntity(AccountDTO accountDTO, String id){
+<span class="nc" id="L30">        AccountDTO modifiedAccountDTO = new AccountDTO();</span>
+<span class="nc" id="L31">        BeanUtils.copyProperties(accountDTO, modifiedAccountDTO);</span>
+<span class="nc" id="L32">        modifiedAccountDTO.setId(id);</span>
+<span class="nc" id="L33">        return Mono.just(modifiedAccountDTO);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

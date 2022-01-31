@@ -1,6 +1,10 @@
 com\bootcamp\second\account\business\AccountService.class
 com\bootcamp\second\account\controller\AccountController.class
+com\bootcamp\second\account\model\Client.class
+com\bootcamp\second\account\model\AccountDTO.class
 com\bootcamp\second\account\model\Account.class
 com\bootcamp\second\account\AccountApplication.class
+com\bootcamp\second\account\utils\Constants.class
+com\bootcamp\second\account\utils\ConversionUtils.class
 com\bootcamp\second\account\business\impl\AccountServiceImpl.class
 com\bootcamp\second\account\repository\AccountRepository.class
