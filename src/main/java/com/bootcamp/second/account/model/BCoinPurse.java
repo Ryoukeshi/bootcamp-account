@@ -7,6 +7,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.ArrayList;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,5 +33,8 @@ public class BCoinPurse {
 
     @Field(name = "amount")
     private String amount;
+
+    @Field(name = "transactionHistory")
+    private ArrayList<TransactionP2P> transactionHistory;
 }
 

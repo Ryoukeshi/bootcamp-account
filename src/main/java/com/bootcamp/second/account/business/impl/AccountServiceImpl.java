@@ -80,7 +80,7 @@ public class AccountServiceImpl implements AccountService{
     @Override
     public Flux<AccountDTO> findAccountByAccType(String acc_type) {
         
-        return accountRepository.findAccountsByAccType(acc_type)
+        return accountRepository.findByAccType(acc_type)
                 .switchIfEmpty(Flux.empty())
                 .filter(account -> account.getStatus().equalsIgnoreCase(Constants.ACTIVE.name()))
                 .map(ConversionUtils::entityToAccountDTO);
@@ -89,7 +89,7 @@ public class AccountServiceImpl implements AccountService{
     @Override
     public Flux<AccountDTO> findAccountByTrLimit(String tr_limit) {
         
-        return accountRepository.findAccountsByTrLimit(tr_limit)
+        return accountRepository.findByTrLimit(tr_limit)
                 .switchIfEmpty(Flux.empty())
                 .filter(account -> account.getStatus().equalsIgnoreCase(Constants.ACTIVE.name()))
                 .map(ConversionUtils::entityToAccountDTO);

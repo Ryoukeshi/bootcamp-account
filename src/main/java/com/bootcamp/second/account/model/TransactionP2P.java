@@ -15,6 +15,9 @@ public class TransactionP2P {
     @Id
     private String id;
 
+    @Field(name = "transactionType")
+    private String transactionType;
+
     @Field(name = "userOrigin")
     private String userOrigin;
 
