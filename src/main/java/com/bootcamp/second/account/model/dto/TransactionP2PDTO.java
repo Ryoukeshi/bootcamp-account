@@ -1,41 +1,24 @@
-package com.bootcamp.second.account.model;
+package com.bootcamp.second.account.model.dto;
 
+import com.bootcamp.second.account.model.BCoin;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class TransactionP2P {
+public class TransactionP2PDTO {
 
-    @Field(name = "id")
     @Id
     private String id;
-
-    @Field(name = "transactionType")
     private String transactionType;
-
-    @Field(name = "userOrigin")
     private String userOrigin;
-
-    @Field(name = "userTarget")
     private String userTarget;
-
-    @Field(name = "paymentMethod")
     private String paymentMethod;
-
-    @Field(name = "bCoin")
     private BCoin bCoin;
-
-    @Field(name = "amount")
     private String amount;
-
-    @Field(name = "date")
     private String date;
-
-    @Field(name = "status")
     private String status;
 }

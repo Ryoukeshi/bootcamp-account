@@ -1,5 +1,6 @@
-package com.bootcamp.second.account.model;
+package com.bootcamp.second.account.model.dto;
 
+import com.bootcamp.second.account.model.Client;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

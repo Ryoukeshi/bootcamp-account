@@ -29,4 +29,7 @@ public class Transaction {
 
     @Field(name = "date")
     private String date;
+
+    @Field(name = "status")
+    private String status;
 }

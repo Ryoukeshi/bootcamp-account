@@ -1,8 +1,7 @@
 package com.bootcamp.second.account.business;
 
-import com.bootcamp.second.account.model.Account;
-
-import com.bootcamp.second.account.model.AccountDTO;
+import com.bootcamp.second.account.model.dto.AccountDTO;
+import com.bootcamp.second.account.model.dto.BCoinDTO;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -14,7 +13,7 @@ public interface AccountService {
 
     Flux<AccountDTO> findAll();
     
-    Mono<AccountDTO> update(AccountDTO account);
+    Mono<AccountDTO> update(String id, AccountDTO account);
 
     Mono<AccountDTO> remove(String accountId);
 
