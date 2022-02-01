@@ -2,7 +2,8 @@ package com.bootcamp.second.account.business.impl;
 
 import com.bootcamp.second.account.business.AccountService;
 import com.bootcamp.second.account.model.Account;
-import com.bootcamp.second.account.model.AccountDTO;
+import com.bootcamp.second.account.model.dto.AccountDTO;
+import com.bootcamp.second.account.model.dto.BCoinDTO;
 import com.bootcamp.second.account.repository.AccountRepository;
 
 import com.bootcamp.second.account.utils.Constants;
@@ -26,7 +27,7 @@ public class AccountServiceImpl implements AccountService{
                 .switchIfEmpty(Mono.just(new Account()))
                 .flatMap(account1 -> ConversionUtils.createAccountEntity(accountDTO))
                 .map(ConversionUtils::accountDtoToEntity)
-                .flatMap(accountRepository::insert)
+                .flatMap(accountRepository::save)
                 .map(ConversionUtils::entityToAccountDTO);
     }
 
@@ -48,11 +49,11 @@ public class AccountServiceImpl implements AccountService{
     }
 
     @Override
-    public Mono<AccountDTO> update(AccountDTO accountDTO) {
+    public Mono<AccountDTO> update(String id, AccountDTO accountDTO) {
         
         return accountRepository.findById(accountDTO.getId())
                 .switchIfEmpty(Mono.empty())
-                .flatMap(account1 -> ConversionUtils.updateAccountEntity(accountDTO, accountDTO.getId()))
+                .flatMap(account1 -> ConversionUtils.updateAccountEntity(accountDTO, id))
                 .map(ConversionUtils::accountDtoToEntity)
                 .flatMap(accountRepository::save)
                 .map(ConversionUtils::entityToAccountDTO);
@@ -80,7 +81,7 @@ public class AccountServiceImpl implements AccountService{
     @Override
     public Flux<AccountDTO> findAccountByAccType(String acc_type) {
         
-        return accountRepository.findAccountsByAccType(acc_type)
+        return accountRepository.findByAccType(acc_type)
                 .switchIfEmpty(Flux.empty())
                 .filter(account -> account.getStatus().equalsIgnoreCase(Constants.ACTIVE.name()))
                 .map(ConversionUtils::entityToAccountDTO);
@@ -89,10 +90,9 @@ public class AccountServiceImpl implements AccountService{
     @Override
     public Flux<AccountDTO> findAccountByTrLimit(String tr_limit) {
         
-        return accountRepository.findAccountsByTrLimit(tr_limit)
+        return accountRepository.findByTrLimit(tr_limit)
                 .switchIfEmpty(Flux.empty())
                 .filter(account -> account.getStatus().equalsIgnoreCase(Constants.ACTIVE.name()))
                 .map(ConversionUtils::entityToAccountDTO);
     }
-    
 }

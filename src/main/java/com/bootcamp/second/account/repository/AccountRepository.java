@@ -12,7 +12,7 @@ public interface AccountRepository extends ReactiveMongoRepository<Account, Stri
 
     Flux<Account> findByOwner(String owner);
     
-    Flux<Account> findAccountsByAccType(String acc_type);
+    Flux<Account> findByAccType(String acc_type);
 
-    Flux<Account> findAccountsByTrLimit(String tr_limit);
+    Flux<Account> findByTrLimit(String tr_limit);
 }
