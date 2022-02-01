@@ -30,6 +30,6 @@ public class BCoinPurse {
     private String email;
 
     @Field(name = "amount")
-    private double amount;
+    private String amount;
 }
 

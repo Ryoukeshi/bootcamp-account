@@ -3,26 +3,29 @@ package com.bootcamp.second.account.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 @Getter
 @Setter
 @NoArgsConstructor
-@Document(collection = "documents")
-public class Transaction {
+public class TransactionP2P {
 
     @Field(name = "id")
+    @Id
     private String id;
 
-    @Field(name = "accountOriginNumber")
-    private String accountOriginNumber;
+    @Field(name = "userOrigin")
+    private String userOrigin;
 
-    @Field(name = "accountDestinyNumber")
-    private String accountDestinyNumber;
+    @Field(name = "userTarget")
+    private String userTarget;
 
-    @Field(name = "currencyType")
-    private String currencyType;
+    @Field(name = "paymentMethod")
+    private String paymentMethod;
+
+    @Field(name = "bCoin")
+    private BCoin bCoin;
 
     @Field(name = "amount")
     private String amount;

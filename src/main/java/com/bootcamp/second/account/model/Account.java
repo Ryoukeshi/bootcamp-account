@@ -21,6 +21,9 @@ public class Account {
     @Id
     private String id;
 
+    @Field(name = "accountNumber")
+    private String accountNumber;
+
     @Field(name = "owner")
     private Client owner;
 
@@ -35,6 +38,9 @@ public class Account {
 
     @Field(name = "transferFee")
     private String transferFee;
+
+    @Field(name = "balance")
+    private String balance;
 
     @Field(name = "status")
     private String status;
